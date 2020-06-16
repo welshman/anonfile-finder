@@ -30,9 +30,6 @@ while True:
    names = artist_name.contents[0]
   webhook = DiscordWebhook(url=WEBHOOK, content=build_url()+" - "+names)
   response = webhook.execute()
-<<<<<<< HEAD
  else:
   print("BAD - "+build_url())
   time.sleep(5)
-=======
->>>>>>> 775ca622c2f3048357dae7972822b6c385e0722d
