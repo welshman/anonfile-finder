@@ -16,7 +16,6 @@ def build_url():
     final_url = base_url + file_id
     return final_url
 
-while True:
  response = requests.get(build_url())
  soup = BeautifulSoup(response.text, 'html.parser')
 
