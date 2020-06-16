@@ -1,5 +1,3 @@
-string
-random
 requests
 discord_webhook
 bs4
