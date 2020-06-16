@@ -2,7 +2,6 @@ import string
 import random
 import requests
 from discord_webhook import DiscordWebhook
-from bs4 import BeautifulSoup
 
 WEBHOOK = 'https://discordapp.com/api/webhooks/720763526712655965/ICkFT1rJDTDwiIG9RX6F8-bYm5VaS9J6akzSsvYBcOdHkd5mE1vYxLXO47XBMWflu1RH'
 
@@ -17,17 +16,6 @@ def build_url():
     return final_url
 
 while True:
- response = requests.get(build_url())
- soup = BeautifulSoup(response.text, 'html.parser')
-
- last_links = soup.find(class_='AlphaNav')
-
- artist_name_list = soup.find(class_='row top-wrapper')
- artist_name_list_items = artist_name_list.find_all('h1')
-
- for artist_name in artist_name_list_items:
-    names = artist_name.contents[0]
-
  if response.status_code == 200:
-  webhook = DiscordWebhook(url=WEBHOOK, content=build_url()+" - "+names)
+  webhook = DiscordWebhook(url=WEBHOOK, content=build_url())
   response = webhook.execute()
