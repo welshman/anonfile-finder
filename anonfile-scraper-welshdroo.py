@@ -16,7 +16,7 @@ def build_url():
     return final_url
 
 while True:
-response = requests.get(build_url())
+ response = requests.get(build_url())
  if response.status_code == 200:
   webhook = DiscordWebhook(url=WEBHOOK, content=build_url())
   response = webhook.execute()
