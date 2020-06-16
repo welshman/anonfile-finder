@@ -1,1 +1,1 @@
-worker: py anonfile-scraper-welshdroo.py
+worker: python anonfile-scraper-welshdroo.py
