@@ -5,7 +5,7 @@ from discord_webhook import DiscordWebhook
 from bs4 import BeautifulSoup
 import time
 
-WEBHOOK = 'https://discordapp.com/api/webhooks/720763526712655965/ICkFT1rJDTDwiIG9RX6F8-bYm5VaS9J6akzSsvYBcOdHkd5mE1vYxLXO47XBMWflu1RH'
+WEBHOOK = '[DISCORD WEBHOOK HERE]'
 
 def get_random_alphaNumeric_string(stringLength=8):
     lettersAndDigits = string.ascii_letters + string.digits
